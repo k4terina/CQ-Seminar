@@ -1,1 +1,6 @@
-.pdf*
+#ignore all pdf files
+*.pdf
+
+#ignore all log files
+*.log
+
