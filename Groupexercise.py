@@ -1,54 +1,59 @@
-print ("")
-input1 = float(input ("Give me number one  "))
-input2 = float(input ("Give me number two "))
-input3 = float(input ("Give me number three "))
-input4 = float(input ("Give me number four  "))
-input5 = float(input ("Give me number five  "))
-input6 = int(input ("Give me number six "))
-input7 = int(input ("Give me number seven "))
-input8 = int(input ("Give me number eight  "))
-input9 = int(input ("Give me number nine "))
-input10 = int(input ("Give me number ten  "))
+#User is asked to input numbers as range input for making lists
 
-print ("")
-print ("Fourth output: ", (input4)//(input2))
-print ("Fifth output: ", (input2)%(input1))
-print ("Sixth output: ", (input2)-(input3))
-print ("Seventh output: ", (input2)**(input3))
-print ("Output: ", (input10)/(input2))
-print ("Second output: ", (input4)*(input2))
-print ("Third output: ", (input1)+(input8))
-print ("Fourth output: ", (input4)//(input2))
-print ("Fifth output: ", (input2)%(input1))
-print ("Sixth output: ", (input9)-(input3))
-print ("Seventh output: ", (input2)**(input10))
-print ("Output: ", (input1)/(input2))
-print ("Second output: ", (input4)*(input2))
-print ("Third output: ", (input1)+(input3))
-print ("Fourth output: ", (input4)//(input2))
-print ("Fifth output: ", (input2)%(input1))
-print ("Sixth output: ", (input2)-(input3))
-print ("Seventh output: ", (input2)**(input3))
-print ("Output: ", (input10)/(input2))
-print ("Second output: ", (input4)*(input2))
-print ("Third output: ", (input1)+(input8))
-print ("Fourth output: ", (input4)//(input2))
-print ("Fifth output: ", (input2)%(input1))
-print ("Sixth output: ", (input9)-(input3))
-print ("Seventh output: ", (input2)**(input10))
-print ("Output: ", (input1)/(input2))
-print ("Second output: ", (input4)*(input2))
-print ("Third output: ", (input1)+(input3))
-print ("Fourth output: ", (input4)//(input2))
-print ("Fifth output: ", (input2)%(input1))
-print ("Sixth output: ", (input2)-(input3))
-print ("Seventh output: ", (input2)**(input3))
-print ("Output: ", (input10)/(input2))
-print ("Second output: ", (input4)*(input2))
-print ("Third output: ", (input1)+(input8))
-print ("Fourth output: ", (input4)//(input2))
-print ("Fifth output: ", (input2)%(input1))
-print ("Sixth output: ", (input9)-(input3))
-print ("Seventh output: ", (input2)**(input10))
-print ("This is our output: ", (input1)/(input2), (input4)*(input2), (input1)+(input3), (input1)+(input3))
-print ("")
+choice1 = int(input("\nGive range for a first list starting default at 0? "))
+choice2 = int(input("\nYour second list starts with number? "))
+choice3 = int(input("\nAnd ends with?"))
+choice4 = int(input("\nYour third list starts with? "))
+choice5 = int(input("\nAnd ends with?"))
+choice6 = int(input("\nAnd uses increments of?"))
+
+#User input is used for creating 3 differrent lists.
+
+list1 = list(range(choice1))
+list2 = list(range(choice2, choice3))
+list3 = list(range(choice4, choice5, choice6))
+
+
+#Output lists that the user specified
+
+print("")
+print("Here are your lists")
+print("")
+print(list1)
+print("")
+print(list2)
+print("")
+print(list3)
+print("")
+
+#User is asked how he wants to modify the 3 lists.
+
+choice7 = int(input("\nType in 1 for reversing all lists now or type 0 for next "))
+choice8 = int(input("\nType in 2 for sorting all lists now or 0 for exit"))
+
+if choice7 == 1:
+    list1.reverse() and list2.reverse() and list3.reverse()
+    print(list1)
+    print(list2)
+    print(list3)
+
+if choice7 == 0:
+    print("You dont want to reverse")
+
+if choice8 == 2:
+    list1.sort() and list2.sort() and list3.sort()
+    print("")
+    print(list1)
+    print(list2)
+    print(list3)
+
+if choice8 == 0:
+    print("")
+    print("You dont want to sort")
+
+
+else:
+    print("")
+    print("Wrong selection number. Try again")
+
+
